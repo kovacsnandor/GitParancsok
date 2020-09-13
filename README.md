@@ -14,8 +14,8 @@
 `git add *.txt` : Minden txt fájl -> színpad (stage)  
 `git add valami.txt` : valami.txt fájl -> színpad (stage)  
 
-`git commit -m "Commit üzenet"` : A helyi repóba mentjük a színpad tartalmát (commit)
-`git commit -am "Commit üzenet"` : Add és commit összevonása (mindent színpadra tesz)
+`git commit -m "Commit üzenet"` : A helyi repóba mentjük a színpad tartalmát (commit)  
+`git commit -am "Commit üzenet"` : Add és commit összevonása (mindent színpadra tesz)  
 
 `git log` : Commitok részletes listázása  
 `git log --oneline` : Commitok tömör listázása  
