@@ -32,6 +32,27 @@
 `git clone url mappa` : A helyi gép mappájába lehúzza az url-hez tartozó gitHub repót a megadott nevű mappába  
 
 ### First GitHud módszer
-Ez a leg
+Ez a legcélravezetőbb:
+1. A GitHub-on létre kell hozni egy repót README.md-vel
+2. Ki kell másolni a repóhoz tartozó url-t
+3. Helyi gépen egy mefelelő mappába kónozni:
+`git clone url`
+
+### First Helyi repó módszer
+A projekt mappájának parancssorában (ez lesz a projekt neve):
+1. Heyi repó létrehozása: 
+`git init`
+2. Létrehozni a README.md fájlt.
+3. README.md -> színpad (stage): 
+`git add README.md`
+4. Commit: 
+`git commit -m "first commit"`
+
+A GitHub-on:
+5. Létrehozni a projektet **README.md nélkül !!!** és kimásolni az url-t
+6. Helyi gép parancssorában kapcsolódni a GitHub projekthez origin néven:
+`git remote add origin url`
+7. Feltölteni ami a helyi repo-ban van:
+`git push -u origin master`
 
 
