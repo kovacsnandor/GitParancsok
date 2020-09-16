@@ -48,6 +48,14 @@ Ez a legcélravezetőbb:
 5. Létrehozni a projektet **README.md nélkül !!!** és kimásolni az url-t
 #### Helyi gép parancssorában:  
 6. kapcsolódni a GitHub projekthez origin néven: `git remote add origin url`  
+  (Ha az 5. lépésben mégis létrehoztuk a README.md fájlt, akkor ki kell adni az alábbi parancsot:  
+  `pit pull origin master --allow-unrelated-histories`)
 7. Feltölteni ami a helyi repo-ban van: `git push -u origin master`
+
+## Ágak (branch)
+Egy ágat azért hozunk létre, hogy anélkül fejlesszünk, hogy zavarnánk a többi ágat.  
+Ha kész vagyunk a fejlesztéssel, akkor a master ágba egyesíthetjük: merge.  
+A helyi repó ágai nem kerülnek fel a GitHub-ra ott külön létre kell őket hozni.  
+
 
 
