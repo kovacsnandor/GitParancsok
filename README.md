@@ -39,20 +39,15 @@ Ez a legcélravezetőbb:
 `git clone url`
 
 ### First Helyi repó módszer
-A projekt mappájának parancssorában (ez lesz a projekt neve):
-1. Heyi repó létrehozása: 
-`git init`
-2. Létrehozni a README.md fájlt.
-3. README.md -> színpad (stage): 
-`git add README.md`
-4. Commit: 
-`git commit -m "first commit"`  
-  A GitHub-on:
+#### A projekt mappájának parancssorában (ez lesz a projekt neve):
+1. Heyi repó létrehozása: `git init`
+2. Létrehozni a **README.md** fájlt.
+3. README.md -> színpad (stage): `git add README.md`
+4. Commit: `git commit -m "first commit"`  
+#### A GitHub-on:
 5. Létrehozni a projektet **README.md nélkül !!!** és kimásolni az url-t
-  Helyi gép parancssorában:  
-6. kapcsolódni a GitHub projekthez origin néven:  
-`git remote add origin url`  
-7. Feltölteni ami a helyi repo-ban van:  
-`git push -u origin master`
+#### Helyi gép parancssorában:  
+6. kapcsolódni a GitHub projekthez origin néven: `git remote add origin url`  
+7. Feltölteni ami a helyi repo-ban van: `git push -u origin master`
 
 
