@@ -49,10 +49,11 @@ A projekt mappájának parancssorában (ez lesz a projekt neve):
 `git commit -m "first commit"`  
 
 A GitHub-on:
-5. Létrehozni a projektet **README.md nélkül !!!** és kimásolni az url-t
-6. Helyi gép parancssorában kapcsolódni a GitHub projekthez origin néven:
+1. Létrehozni a projektet **README.md nélkül !!!** és kimásolni az url-t
+Helyi gép parancssorában:
+2. kapcsolódni a GitHub projekthez origin néven:
 `git remote add origin url`  
-7. Feltölteni ami a helyi repo-ban van:  
+3. Feltölteni ami a helyi repo-ban van:  
 `git push -u origin master`
 
 
