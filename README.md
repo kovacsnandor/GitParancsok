@@ -47,13 +47,12 @@ A projekt mappájának parancssorában (ez lesz a projekt neve):
 `git add README.md`
 4. Commit: 
 `git commit -m "first commit"`  
-
-A GitHub-on:  
-  4. Létrehozni a projektet **README.md nélkül !!!** és kimásolni az url-t  
-Helyi gép parancssorában:  
-  5. kapcsolódni a GitHub projekthez origin néven:  
+  A GitHub-on:
+5. Létrehozni a projektet **README.md nélkül !!!** és kimásolni az url-t
+  Helyi gép parancssorában:  
+6. kapcsolódni a GitHub projekthez origin néven:  
 `git remote add origin url`  
-  6. Feltölteni ami a helyi repo-ban van:  
+7. Feltölteni ami a helyi repo-ban van:  
 `git push -u origin master`
 
 
