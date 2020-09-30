@@ -49,7 +49,8 @@ Ez a legcélravezetőbb:
 #### Helyi gép parancssorában:  
 6. kapcsolódni a GitHub projekthez origin néven: `git remote add origin url`  
   (Ha az 5. lépésben mégis létrehoztuk a README.md fájlt, akkor ki kell adni az alábbi parancsot:  
-  `pit pull origin master --allow-unrelated-histories`)
+  `git pull origin master --allow-unrelated-histories`)
+6a. Ha rossz helyre kapcsolódtunk, az visza lehet vonni: `git remote remove origin`
 7. Feltölteni ami a helyi repo-ban van: `git push -u origin master`
 
 ## Ágak (branch)
