@@ -50,8 +50,8 @@ Ez a legcélravezetőbb:
 6. kapcsolódni a GitHub projekthez origin néven: `git remote add origin url`  
   (Ha az 5. lépésben mégis létrehoztuk a README.md fájlt, akkor ki kell adni az alábbi parancsot:  
   `git pull origin master --allow-unrelated-histories`)
-  6a. Ha rossz helyre kapcsolódtunk, az visza lehet vonni: `git remote remove origin`
-7. Feltölteni ami a helyi repo-ban van: `git push -u origin master`
+7. Ha rossz helyre kapcsolódtunk, vissza lehet vonni: `git remote remove origin`
+8. Feltölteni ami a helyi repo-ban van: `git push -u origin master`
 
 ## Ágak (branch)
 Egy ágat azért hozunk létre, hogy anélkül fejlesszünk, hogy zavarnánk a többi ágat.  
