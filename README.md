@@ -2,11 +2,11 @@
 
 ## Helyi repo
 ### Email és User név beállítása
-`git config --global user.email xy.gmail.com` : Email megadása globálisan
-`git config --global user.name xy` : Usernév megadása globálisan
+`git config --global user.email xy.gmail.com` : Email megadása globálisan  
+`git config --global user.name xy` : Usernév megadása globálisan  
 
-`git config user.email xy.gmail.com` : Email megadása lokálisan (csak arra a mappára)
-`git config user.name xy` : Usernév megadása lokálisan
+`git config user.email xy.gmail.com` : Email megadása lokálisan (csak arra a mappára)  
+`git config user.name xy` : Usernév megadása lokálisan  
 
 ### Helyi repo létrehozása
 `git init` : Helyi repo létrehozás (mappán belül)
@@ -22,7 +22,7 @@
 `git commit -m "Commit üzenet"` : A helyi repóba mentjük a színpad tartalmát (commit)  
 `git commit -am "Commit üzenet"` : Add és commit összevonása (mindent színpadra tesz) 
 
-`git diff` : Megnézhetem, hogy mit változtattam az alőzőhöz képest
+`git diff` : Megnézhetem, hogy mit változtattam az alőzőhöz képest  
 
 `git log` : Commitok részletes listázása  
 `git log --oneline` : Commitok tömör listázása  
@@ -50,10 +50,10 @@
     - Feloldás: 
         - A probémás fájlba a rendszer mindkét változatot beteszi, és kézzel eldöntjük, hogy melyik jó.
 
-`git checkout -b 1.0` : Új branch (ág) létrehozása (pl. 1.0), átváltás az új ágra
-`git branch` : Branc-ek lekérdezése (azt is mutatja, hogy jelenleg hol vagyok)
-`git checkout master` : Ugrás a megadott (pl. master) ágra
-`git merge 1.0` : Az 1.0-ás ág egyesítése azzal az ággal, ahol vagyok.
+`git checkout -b 1.0` : Új branch (ág) létrehozása (pl. 1.0), átváltás az új ágra  
+`git branch` : Branc-ek lekérdezése (azt is mutatja, hogy jelenleg hol vagyok)  
+`git checkout master` : Ugrás a megadott (pl. master) ágra  
+`git merge 1.0` : Az 1.0-ás ág egyesítése azzal az ággal, ahol vagyok.  
 
 ## Helyi repo - GitHUb összekapcsolódás
 
