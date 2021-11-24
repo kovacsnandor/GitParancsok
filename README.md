@@ -8,6 +8,8 @@
 `git config user.email xy.gmail.com` : Email megadása lokálisan (csak arra a mappára)  
 `git config user.name xy` : Usernév megadása lokálisan  
 
+`git config --list` : A konfig fájl listája (kilépés: `q`)
+
 ### Helyi repo létrehozása
 `git init` : Helyi repo létrehozás (mappán belül)
 `git init mappa` : Helyi repo létrehozása a mappa nevű mappában
@@ -33,6 +35,8 @@
 `git checkout HEAD~1` : Időgép: menj egy committal előbbi állapotra  
 `git checkout master` : Időgép: visszaállás a legfrisebb állapotra  
 
+
+
 ### Branch (ágak)
 - Alapban a `master` nevű ág van, abban vagyunk.
 - A külön ágak azért kellenek, hogy egymástól elkülönülve tudjunk fejleszteni pl. a következő verziót
@@ -56,6 +60,15 @@
 `git merge 1.0` : Az 1.0-ás ág egyesítése azzal az ággal, ahol vagyok.  
 
 ## Helyi repo - GitHUb összekapcsolódás
+Az első push-nál `personal acces token`-t kell létrehozni:
+- Github / Setting / Developer settigs
+    - Personal access tokens
+        - Generate new token
+            - Kell egy név
+            - mennyi időre
+            - pipáljuk a repo-t
+            - Ad egy tokent
+            - ezt kell beilleszteni
 
 ### Meglévő GitHub repo klónozása
 `git clone url` : A helyi gép mappájába lehúzza az url-hez tartozó gitHub repót a repó nevének mappájába  
@@ -82,6 +95,12 @@ Ez a legcélravezetőbb:
   `git pull origin master --allow-unrelated-histories`)
 7. Ha rossz helyre kapcsolódtunk, vissza lehet vonni: `git remote remove origin`
 8. Feltölteni ami a helyi repo-ban van: `git push -u origin master`
+
+### push, pull
+`git push` : A commitált váltztatások felküldése a távoli repóba  
+`git pull` : A távoli repóból lehúzza a változatásokat (érdemes mindig ezzel kezdeni)  
+Ha a távoli repóban van változás és még nem volt pul, akkor nem működik a push
+
 
 ## Ágak (branch)
 Egy ágat azért hozunk létre, hogy anélkül fejlesszünk, hogy zavarnánk a többi ágat.  
