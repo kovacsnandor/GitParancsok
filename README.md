@@ -29,6 +29,7 @@
 `git log` : Commitok részletes listázása  
 `git log --oneline` : Commitok tömör listázása  
 `git log --oneline --graph` : Commitok tömör listázása  "grafkusan"  
+`git log --pretry=oneline` : Commitok tömör listázása (egymás alá)  
 
 ### Időgép parancsok
 `git checkout commitID` : Időgép: a megadott commitID-jű állapotba állítja a projektet  
@@ -96,11 +97,24 @@ Ez a legcélravezetőbb:
 7. Ha rossz helyre kapcsolódtunk, vissza lehet vonni: `git remote remove origin`
 8. Feltölteni ami a helyi repo-ban van: `git push -u origin master`
 
+### A távoli repó (GitHub) lekérdezése
+`git remote` : a távoli repo álneve: origin
+`git remote -v` : a távoli repo url-je
+`git remote show origin` : távoli repo állapotának lekérdezése
+
 ### push, pull
 `git push` : A commitált váltztatások felküldése a távoli repóba  
 `git pull` : A távoli repóból lehúzza a változatásokat (érdemes mindig ezzel kezdeni)  
-Ha a távoli repóban van változás és még nem volt pul, akkor nem működik a push
+Ha a távoli repóban van változás és még nem volt pul, akkor nem működik a push  
 
+`git fetch` : lehozza változatásokat, de nem mergeli össze a helyi repóval. Ezután ki kell adni:  
+`git merge origin/master`
+
+### Tag-ek
+`git push --tags` : tag-ek pusholása (???) 
+
+## Kollaboráció
+Settings / Manage access
 
 ## Ágak (branch)
 Egy ágat azért hozunk létre, hogy anélkül fejlesszünk, hogy zavarnánk a többi ágat.  
