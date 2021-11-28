@@ -1,42 +1,161 @@
-# Git Parancsok
+# Git telepítése
+[git oldal](https://git-scm.com/)
+## Lépéssek
+1. Parancsori lehetőségek: GitBash ajánlott
+![setup 1](pict/setup1.JPG)    
 
-## Helyi repo
+2. Alapértelmezett editor: Note++, VsCode, stb.
+![setup 2](pict/setup2.JPG)   
+
+3. A fő ág elnevezése:
+    - Régen ez master volt, ma main
+    - Ez csak a régi repositorikra vonatkozik
+![setup 3](pict/setup3.JPG)    
+
+4. Melyik command ablakba integrálja magát.
+![setup 4](pict/setup4.JPG)
+
+5. Milyen biztonságos csatornán kommunikáljon a távoli repo-val.
+![setup 5](pict/setup5.JPG)
+
+6. Hol legyen a certificate (tanúsítvány) fájl.
+![setup 6](pict/setup6.JPG)
+
+7. Mi legyen a sorvége jel (Wondowsnál az első ajánlott).
+![setup 7](pict/setup7.JPG)
+
+8. Melyik terminált emulálja a GitBash.
+![setup 8](pict/setup8.JPG)
+
+9. Dafault ajánlott: pull esetén ha nálunk nics változtatás, akkor lehúzza, egéybként megpróbálja merge-elni.
+![setup 9](pict/setup9.JPG)
+
+10. Ne kelljen állandóan beírni az azonosító lulcsot, csak egyszer.
+![setup 10](pict/setup10.JPG)
+
+11. Extra opciók.
+![setup 11](pict/setup11.JPG)
+
+12. Kírésleti opciók.
+![setup 12](pict/setup12.JPG)
+
+## Git verziója
+`git --version`
+
+# Git működése
+## Verziók tárolása
+A Git a különböző verzióknál 
+- nem a különbségeket, hanem a megváltozatott teljes állományokat tárolja, 
+- kivéve, ha valami nem változott.
+![vezriók](pict/chekins-over-time.JPG)
+
+## Hol zajlanak a műveletek
+- A git műveletei gyakorlatilag a helyi repóban zajlanak
+- A távoli repó szinkronizálásra és fejlesztői kommunikációra való
+
+## Verziók megkülönböztetése
+- Minden változtatásról készített pillanatfelvétel (commit) egy 
+- hash kód jellemez, ami:
+    - 40 karakterből álló karaktersorozat (helxadecimális számjegyek)
+    - egyedi
+    - lavina hatás: kis változás a kódban, nagy változás a hash-ben
+
+## A három állapot
+A Gitnek három fő állapota van, amelyekben a fájlok elhelyezkedhetnek: 
+- módosított:
+    - módosítottuk a fájlt, de még nem helyeztük el az adatbázisába
+- színpadi (stage):
+    - a véglegesítéshez megjelölt (színpadra (stage) helyezett) fájlok
+- véglegesített (commit):
+    - A helyi repóban tárolt állománylok
+
+Állapotábra: 
+![állapotok](pict/states.JPG)  
+
+## Parancs logika
+- Minden parancs a `git` kulcsszóval kezdődik
+- Help: `git`
+- Parancs szerkezet. `git <parancs> [<argumentumok>]`
+- Argumentumok (módosítók):
+    - hosszú paraméter példa: `git config --list`
+    - rövid paraméter példa:  `git config -l`
+
+## Config
+### A config fájlok helye és neve
+A config vájlok a `config` nevű állományban találhatók.
+- Globális config fájlok: A profilunkban valahol.
+- Lokális: A `.git/config` állományban
+    - Ütközés esetén a **lokális az erősebb**.
+
+### Config fájlok listázása
+`git config --list`: Az **aktuális** (local, global) **beállítások** listázása (kilpép: q).
+`git config --list --show-scope`: A beállítások local, global szelektált listázása.
+`git config user.email`: Egy adott beállítás (pl. Email) értékének listázása.
+
+### Config fájlok szerkesztése
+A globálisan beállított editorban megnyílik a konfigurációs fájl.  
+`git config --edit`: Lokális beállítások.
+`git config --edit --global`: Golbális beállítások.
+
+
+## Fontos beállítások
+
 ### Email és User név beállítása
-`git config --global user.email xy.gmail.com` : Email megadása globálisan  
-`git config --global user.name xy` : Usernév megadása globálisan  
+A commit-nál elengedhetetlen, hogy lássuk, ki tette, ezért be kell állítani egy emailt, és user nevet. Ez lehetőleg a GitHUb regisztrációnk szerinti legyen.  
 
-`git config user.email xy.gmail.com` : Email megadása lokálisan (csak arra a mappára)  
-`git config user.name xy` : Usernév megadása lokálisan  
+**Globálisan**:  
+`git config --global user.email xy.gmail.com` : **Email** megadása **globálisan**  
+`git config --global user.name xy` : **Usernév** megadása **globálisan**  
+
+**Lokálisan**:  
+`git config user.email xy.gmail.com` : **Email** megadása **lokálisan** (csak arra a mappára)  
+`git config user.name xy` : **Usernév** megadása **lokálisan**  
 
 `git config --list` : A konfig fájl listája (kilépés: `q`)
 
+# Git Parancsok
+
+## Helyi repo
+
 ### Helyi repo létrehozása
-`git init` : Helyi repo létrehozás (mappán belül)
-`git init mappa` : Helyi repo létrehozása a mappa nevű mappában
+`git init`: Helyi repo létrehozás (mappán belül).  
+`git init mappa` : Helyi repo létrehozása a mappa nevű mappában.  
 
 ### Alap parancsok
-`git status` : Git állapotának lekérdezése  
+**Status**:  
+`git status`: Git állapotának lekérdezése.  
 
-`git add .` : Minden fájl -> színpad (stage)   
-`git add *.txt` : Minden txt fájl -> színpad (stage)  
-`git add valami.txt` : valami.txt fájl -> színpad (stage)  
 
-`git commit -m "Commit üzenet"` : A helyi repóba mentjük a színpad tartalmát (commit)  
-`git commit -am "Commit üzenet"` : Add és commit összevonása (mindent színpadra tesz) 
+**Stage (színpad)-ra rakás**  
+`git add .`: Minden fájl -> színpad (stage).   
+`git add *.txt`: Minden txt fájl -> színpad (stage).  
+`git add valami.txt`: valami.txt fájl -> színpad (stage).  
 
-`git diff` : Megnézhetem, hogy mit változtattam az alőzőhöz képest  
+**Vissza a színpadról**:  
+`git restore --staged fájlnév`: Egy vagy több fájl visszahívása a színpadról.  
+
+**Az új bejegyzések törlése színpad előtt**:  
+`git restore fájlnév`: A fájlon trötént változatások visszavonása
+
+
+**Commit**:
+Commit (A commit üzenete: `miért csináltuk`, ne az hogy mit csináltunk).
+`git commit -m "Commit üzenet"`: A helyi repóba mentjük a színpad tartalmát (commit).  
+`git commit -am "Commit üzenet"`: Add és commit összevonása (mindent színpadra tesz). 
+
+`git diff` : Megnézhetem commit előtt (míg a színpadon van), hogy mit változtattam az előzőhöz képest .
 
 ### Listázások: log, show
 log: commit listák  
-`git log` : Commitok részletes listázása  
-`git log --oneline` : Commitok tömör listázása  
-`git log --oneline --graph` : Commitok tömör listázása  "grafkusan"  
-`git log --pretry=oneline` : Commitok tömör listázása (egymás alá) 
+`git log`: Commitok részletes listázása  
+`git log --oneline`: Commitok tömör listázása  
+`git log --oneline --graph`: Commitok tömör listázása  "grafkusan"  
+`git log --pretry=oneline`: Commitok tömör listázása (egymás alá) 
+`git log --pretry=oneline --graph`: Commitok tömör listázása (egymás alá) 
 
 show: adott commit adatainak listázása
 `git show`: Az aktuális commit minden adatának listázása (még a diff is)
 `git show v1.0`: A v1.0-ás tag-ű commit listázása
-
 
 ### Időgép parancsok
 A `HEAD` mutató mutatja, hogy melyik commiton állunk.  
@@ -47,8 +166,6 @@ Ha elmozgatjuk a HEAD-et, akkor `detach állapotban` vagyunk
 `git checkout -`: Időgép: Állj vissza oda, ahonnan eredetileg jöttél  
 `git checkout v1.0`: Időgép: menj a v1.0-ás tag-ű commit állapotra  
 `git checkout master`: Időgép: visszaállás a legfrisebb állapotra  
-
-
 
 ### Branch (ágak)
 - Alapban a `master` nevű ág van, abban vagyunk.
@@ -68,8 +185,8 @@ Ha elmozgatjuk a HEAD-et, akkor `detach állapotban` vagyunk
         - A probémás fájlba a rendszer mindkét változatot beteszi, és kézzel eldöntjük, hogy melyik jó.
 
 Létrehozás:  
-`git checkout -b 1.0` : Új branch (ág) létrehozása (pl. `1.0`), átváltás az új ágra  
-`git branch 2.0` : Új branch (`2.0`) létrehozása, de nem vált át
+`git checkout -b 1.0`: Új branch (ág) létrehozása (pl. `1.0`), átváltás az új ágra  
+`git branch 2.0`: Új branch (`2.0`) létrehozása, de nem vált át
 `git switch -c 3.0`: Új branch (ág) létrehozása (pl. `3.0`), átváltás az új ágra  
 `git branch 4.0 34d56fgz`: Új branch (`4.0`) a `34d56fgz` committól elágazva
 
@@ -83,16 +200,26 @@ Törlés:
 `git branch -D 3.0`: Hard törlés: akármi van, törlődik, de fizikailag nem törlődik csak nem lehet látni. A hash-vel még vissza lehet rá menni. De egy idő után automatikusan el fog tűnni.
 
 Lekérdezés, ugrás:   
-`git branch`: Branc-ek lekérdezése (azt is mutatja, hogy jelenleg hol vagyok)  
+`git branch`: Branc-ek (lokális) lekérdezése (azt is mutatja, hogy jelenleg hol vagyok)  
 `git branch -l m*`: Az m-el kezdődő ágak lekérdezése
+`git branch -v`: Az ágak lekérdezése és azok commit hash-ei
+`git branch -vv`: Az ágak lekérdezése és azok commit hash-ei, és kimutja, hogy melyik branch követi a távoli branch-et.
+`git branch --remote`: A távoli (GitHUb) branch-ek listája
 
 Átváltás:  
-`git checkout master` : Ugrás a megadott (pl. master) ágra  
+`git checkout master`: Ugrás a megadott (pl. master) ágra  
 `git switch master`: Ugrás a megadott (pl. master) ágra
 `git switch -`: Ugrás az előző ágra
 
+Merge:  
+`git merge 1.0`: Az 1.0-ás ág egyesítése azzal az ággal, ahol vagyok.
+Merge típusok:  
+- `Fast-forward` (előre ugrás): olyan merge, hogy közben a master nem változott (nem divergáltak az ágak)
+![fast forward](pict/merge-fastForward.JPG)
+- `Three-way` merge (három utas): olyan merge, hogy közben a master változott (divergáltak az ágak)
+![three-way](pict/merge-threeWay.JPG)
 
-`git merge 1.0` : Az 1.0-ás ág egyesítése azzal az ággal, ahol vagyok.  
+`git merge --abort`: Konfliktusos helyzetben (marging állapotban) visszavonhatjuk a merge szándékunkat.
 
 ## Helyi repo - GitHUb összekapcsolódás
 Az első push-nál `personal acces token`-t kell létrehozni:
@@ -106,8 +233,8 @@ Az első push-nál `personal acces token`-t kell létrehozni:
             - ezt kell beilleszteni
 
 ### Meglévő GitHub repo klónozása
-`git clone url` : A helyi gép mappájába lehúzza az url-hez tartozó gitHub repót a repó nevének mappájába  
-`git clone url mappa` : A helyi gép mappájába lehúzza az url-hez tartozó gitHub repót a megadott nevű mappába  
+`git clone url`: A helyi gép mappájába lehúzza az url-hez tartozó gitHub repót a repó nevének mappájába  
+`git clone url mappa`: A helyi gép mappájába lehúzza az url-hez tartozó gitHub repót a megadott nevű mappába  
 
 ### First GitHud módszer
 Ez a legcélravezetőbb:
@@ -137,7 +264,8 @@ Ez a legcélravezetőbb:
 `git remote show origin`: távoli repo állapotának lekérdezése
 
 ### push, pull
-`git push`: A commitált váltztatások felküldése a távoli repóba  
+`git push`: A commitált változtatások felküldése a távoli repóba (csak az aktuális ág fog felkerülni)  
+`git push --all`: Minden ág felkerül (ezt nem érdemes csinálni, mert a saját ágaink lehet hogy nem érdekesek.)  
 `git pull`: A távoli repóból lehúzza a változatásokat (érdemes mindig ezzel kezdeni)  
 Ha a távoli repóban van változás és még nem volt pul, akkor nem működik a push  
 
