@@ -301,3 +301,11 @@ A helyi repó ágai nem kerülnek fel a GitHub-ra ott külön létre kell őket 
 
 
 
+# Minta fejlesztés
+## Fogalmak
+`deployment`: az első publikált állapot a gitHUb-on. 
+
+A branc-ek azért vannak, hogy el tudjuk különíteni a fejlesztéseket.  
+
+
+
