@@ -1,4 +1,4 @@
-# Git telepítése a száámítógépre
+# Git telepítése a számítógépre
 [git oldal](https://git-scm.com/)
 
 ## Lépéssek
