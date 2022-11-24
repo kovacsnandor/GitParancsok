@@ -105,12 +105,12 @@ A globálisan beállított editorban megnyílik a konfigurációs fájl.
 A commit-nál elengedhetetlen, hogy lássuk, ki tette, ezért be kell állítani egy emailt, és user nevet. Ez lehetőleg a GitHUb regisztrációnk szerinti legyen.  
 
 **Globálisan**:  
-`git config --global user.email xy.gmail.com` : **Email** megadása **globálisan**  
-`git config --global user.name xy` : **Usernév** megadása **globálisan**  
+`git config --global user.email "xy.gmail.com"` : **Email** megadása **globálisan**  
+`git config --global user.name "xy"` : **Usernév** megadása **globálisan**  
 
 **Lokálisan**:  
-`git config user.email xy.gmail.com` : **Email** megadása **lokálisan** (csak arra a mappára)  
-`git config user.name xy` : **Usernév** megadása **lokálisan**  
+`git config user.email "xy.gmail.com"` : **Email** megadása **lokálisan** (csak arra a mappára)  
+`git config user.name "xy"` : **Usernév** megadása **lokálisan**  
 
 `git config --list` : A konfig fájl listája (kilépés: `q`)
 
