@@ -141,6 +141,7 @@ A commit-nál elengedhetetlen, hogy lássuk, ki tette, ezért be kell állítani
 
 **Commit**:
 Commit (A commit üzenete: `miért csináltuk`, ne az hogy mit csináltunk).
+
 `git commit -m "Commit üzenet"`: A helyi repóba mentjük a színpad tartalmát (commit).  
 `git commit -am "Commit üzenet"`: Add és commit összevonása (mindent színpadra tesz). 
 
