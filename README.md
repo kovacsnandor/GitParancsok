@@ -1,7 +1,47 @@
 [this repo](https://github.com/kovacsnandor/GitParancsok)
+# Tartalom
+
+- [Git telepítése a számítógépre](#git-teleptse-a-szmtgpre)
+  - [Lépéssek](#lpssek)
+  - [Git verziója](#git-verzija)
+- [Git működése](#git-mkdse)
+  - [Verziók tárolása](#verzik-trolsa)
+  - [Hol zajlanak a műveletek](#hol-zajlanak-a-mveletek)
+  - [Verziók megkülönböztetése](#verzik-megklnbztetse)
+  - [A három állapot](#a-hrom-llapot)
+  - [Parancs logika](#parancs-logika)
+  - [Config](#config)
+    - [A config fájlok helye és neve](#a-config-fjlok-helye-s-neve)
+    - [Config fájlok listázása](#config-fjlok-listzsa)
+    - [Config fájlok szerkesztése](#config-fjlok-szerkesztse)
+  - [Fontos beállítások](#fontos-belltsok)
+    - [Email és User név beállítása](#email-s-user-nv-belltsa)
+    - [Email és User név beállítása kötegelt fájlból](#email-s-user-nv-belltsa-ktegelt-fjlbl)
+- [Git Parancsok](#git-parancsok)
+  - [Helyi repo](#helyi-repo)
+    - [Helyi repo létrehozása](#helyi-repo-ltrehozsa)
+    - [Alap parancsok](#alap-parancsok)
+    - [Listázások: log, show](#listzsok-log-show)
+    - [Időgép parancsok](#idgp-parancsok)
+    - [Branch (ágak)](#branch-gak)
+  - [Helyi repo - GitHUb összekapcsolódás](#helyi-repo---github-sszekapcsolds)
+    - [VsCode és GitHub összekapcsolása](#vscode-s-github-sszekapcsolsa)
+    - [Meglévő GitHub repo klónozása](#meglv-github-repo-klnozsa)
+    - [First GitHud módszer](#first-githud-mdszer)
+    - [First Helyi repó módszer](#first-helyi-rep-mdszer)
+      - [A projekt mappájának parancssorában (ez lesz a projekt neve):](#a-projekt-mappjnak-parancssorban-ez-lesz-a-projekt-neve)
+      - [A GitHub-on:](#a-github-on)
+      - [Helyi gép parancssorában:](#helyi-gp-parancssorban)
+    - [A távoli repó (GitHub) lekérdezése](#a-tvoli-rep-github-lekrdezse)
+    - [push, pull](#push-pull)
+    - [Tag-ek](#tag-ek)
+  - [Kollaboráció](#kollaborci)
+  - [Ágak (branch)](#gak-branch)
+- [Minta fejlesztés](#minta-fejleszts)
+  - [Fogalmak](#fogalmak)
 
 # Git telepítése a számítógépre
-[telepítés cikk](https://phoenixnap.com/kb/how-to-install-git-windows)
+[telepítés cikk](https://phoenixnap.com/kb/how-to-install-git-windows)  
 [git oldal](https://git-scm.com/)
 
 ## Lépéssek
@@ -50,8 +90,8 @@
 ## Verziók tárolása
 A Git a különböző verzióknál 
 - nem a különbségeket, hanem a megváltozatott teljes állományokat tárolja, 
-- kivéve, ha valami nem változott.
-![vezriók](pict/chekins-over-time.JPG)
+- kivéve, ha valami nem változott.  
+![verziók](pict/chekins-over-time.JPG)
 
 ## Hol zajlanak a műveletek
 - A git műveletei gyakorlatilag a helyi repóban zajlanak
@@ -73,7 +113,7 @@ A Gitnek három fő állapota van, amelyekben a fájlok elhelyezkedhetnek:
 - véglegesített (commit):
     - A helyi repóban tárolt állománylok
 
-Állapotábra: 
+Állapotábra:  
 ![állapotok](pict/states.JPG)  
 
 ## Parancs logika
@@ -86,7 +126,7 @@ A Gitnek három fő állapota van, amelyekben a fájlok elhelyezkedhetnek:
 
 ## Config
 ### A config fájlok helye és neve
-[cikk](https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/Where-system-global-and-local-Windows-Git-config-files-are-saved)
+[cikk](https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/Where-system-global-and-local-Windows-Git-config-files-are-saved)  
 A config vájlok a `config` nevű állományban találhatók.
 - Globális config fájlok: A profilunkban valahol.
 - Lokális: A `.git/config` állományban
