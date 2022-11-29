@@ -1,7 +1,7 @@
 [this repo](https://github.com/kovacsnandor/GitParancsok)
 # Tartalom
 
-- [Git telepítése a számítógépre](#git-teleptse-a-szmtgpre)
+- [Git telepítése a számítógépre](#git-telepítése-a-számítógépre)
   - [Lépéssek](#lpssek)
   - [Git verziója](#git-verzija)
 - [Git működése](#git-mkdse)
