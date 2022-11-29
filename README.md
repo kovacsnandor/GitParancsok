@@ -1,6 +1,7 @@
 [this repo](https://github.com/kovacsnandor/GitParancsok)
 
 # Git telepítése a számítógépre
+[telepítés cikk](https://phoenixnap.com/kb/how-to-install-git-windows)
 [git oldal](https://git-scm.com/)
 
 ## Lépéssek
