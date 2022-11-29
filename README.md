@@ -5,7 +5,7 @@
 [git oldal](https://git-scm.com/)
 
 ## Lépéssek
-1. Parancsori lehetőségek: GitBash ajánlott
+1. Parancsori lehetőségek: GitBash ajánlott  
 ![setup 1](pict/setup1.JPG)    
 
 2. Alapértelmezett editor: Note++, VsCode, stb.
