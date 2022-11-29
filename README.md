@@ -115,6 +115,22 @@ A commit-nál elengedhetetlen, hogy lássuk, ki tette, ezért be kell állítani
 
 `git config --list` : A konfig fájl listája (kilépés: `q`)
 
+### Email és User név beállítása kötegelt fájlból
+[cikk](https://stackoverflow.com/questions/5401229/how-do-i-execute-several-git-commands-in-a-batch-file-without-terminating-after)
+1. Hozz létre egy emus.bat szövegfájlt (mindegy a fájl neve)
+2. írd be ezt a két sort:
+```.bat
+git config user.email "xy.gmail.com"
+git config user.name "xy"
+```
+3. a parancs ablakba írd be: `emus.bat` és enter (A két parancs egymás után lefut)
+4. Ha nem akarod hogy ez a fájl szinkronizálódjon, tedd be a `.gitignore` fájlba.
+```.gitignore
+emus.bat
+```
+5. Ezt a fájlt használhatod más projektekhez
+
+
 # Git Parancsok
 
 ## Helyi repo
