@@ -83,6 +83,7 @@ A Gitnek három fő állapota van, amelyekben a fájlok elhelyezkedhetnek:
 
 ## Config
 ### A config fájlok helye és neve
+[cikk](https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/Where-system-global-and-local-Windows-Git-config-files-are-saved)
 A config vájlok a `config` nevű állományban találhatók.
 - Globális config fájlok: A profilunkban valahol.
 - Lokális: A `.git/config` állományban
