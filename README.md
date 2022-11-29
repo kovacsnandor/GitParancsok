@@ -212,11 +212,11 @@ log: commit listák
 `git log`: Commitok részletes listázása  
 `git log --oneline`: Commitok tömör listázása  
 `git log --oneline --graph`: Commitok tömör listázása  "grafkusan"  
-`git log --pretry=oneline`: Commitok tömör listázása (egymás alá) 
+`git log --pretry=oneline`: Commitok tömör listázása (egymás alá)  
 `git log --pretry=oneline --graph`: Commitok tömör listázása (egymás alá) 
 
 show: adott commit adatainak listázása
-`git show`: Az aktuális commit minden adatának listázása (még a diff is)
+`git show`: Az aktuális commit minden adatának listázása (még a diff is)  
 `git show v1.0`: A v1.0-ás tag-ű commit listázása
 
 ### Időgép parancsok
@@ -248,7 +248,7 @@ Ha elmozgatjuk a HEAD-et, akkor `detach állapotban` vagyunk
 
 Létrehozás:  
 `git checkout -b 1.0`: Új branch (ág) létrehozása (pl. `1.0`), átváltás az új ágra  
-`git branch 2.0`: Új branch (`2.0`) létrehozása, de nem vált át
+`git branch 2.0`: Új branch (`2.0`) létrehozása, de nem vált át  
 `git switch -c 3.0`: Új branch (ág) létrehozása (pl. `3.0`), átváltás az új ágra  
 `git branch 4.0 34d56fgz`: Új branch (`4.0`) a `34d56fgz` committól elágazva
 
@@ -257,28 +257,28 @@ Létrehozás:
 
 Törlés:
 - Amin állunk, azt nem lehet törölni
-- Ami még nem lett merge-ölve, azt csak `D`-vel lehet törölni 
+- Ami még nem lett merge-ölve, azt csak `D`-vel lehet törölni  
 `git branch -d 3.0`: Lágy törlés: a `3.0` branch törlése (törlődik ha üres, vagy már merge-ölve volt)  
 `git branch -D 3.0`: Hard törlés: akármi van, törlődik, de fizikailag nem törlődik csak nem lehet látni. A hash-vel még vissza lehet rá menni. De egy idő után automatikusan el fog tűnni.
 
 Lekérdezés, ugrás:   
 `git branch`: Branc-ek (lokális) lekérdezése (azt is mutatja, hogy jelenleg hol vagyok)  
-`git branch -l m*`: Az m-el kezdődő ágak lekérdezése
-`git branch -v`: Az ágak lekérdezése és azok commit hash-ei
-`git branch -vv`: Az ágak lekérdezése és azok commit hash-ei, és kimutja, hogy melyik branch követi a távoli branch-et.
+`git branch -l m*`: Az m-el kezdődő ágak lekérdezése  
+`git branch -v`: Az ágak lekérdezése és azok commit hash-ei  
+`git branch -vv`: Az ágak lekérdezése és azok commit hash-ei, és kimutja, hogy melyik branch követi a távoli branch-et.  
 `git branch --remote`: A távoli (GitHUb) branch-ek listája
 
 Átváltás:  
 `git checkout master`: Ugrás a megadott (pl. master) ágra  
-`git switch master`: Ugrás a megadott (pl. master) ágra
+`git switch master`: Ugrás a megadott (pl. master) ágra  
 `git switch -`: Ugrás az előző ágra
 
 Merge:  
 `git merge 1.0`: Az 1.0-ás ág egyesítése azzal az ággal, ahol vagyok.
 Merge típusok:  
-- `Fast-forward` (előre ugrás): olyan merge, hogy közben a master nem változott (nem divergáltak az ágak)
+- `Fast-forward` (előre ugrás): olyan merge, hogy közben a master nem változott (nem divergáltak az ágak)  
 ![fast forward](pict/merge-fastForward.JPG)
-- `Three-way` merge (három utas): olyan merge, hogy közben a master változott (divergáltak az ágak)
+- `Three-way` merge (három utas): olyan merge, hogy közben a master változott (divergáltak az ágak)  
 ![three-way](pict/merge-threeWay.JPG)
 
 `git merge --abort`: Konfliktusos helyzetben (marging állapotban) visszavonhatjuk a merge szándékunkat.
@@ -330,8 +330,8 @@ Ez a legcélravezetőbb:
 8. Feltölteni ami a helyi repo-ban van: `git push -u origin master`
 
 ### A távoli repó (GitHub) lekérdezése
-`git remote`: a távoli repo álneve: origin
-`git remote -v`: a távoli repo url-je
+`git remote`: a távoli repo álneve: origin  
+`git remote -v`: a távoli repo url-je  
 `git remote show origin`: távoli repo állapotának lekérdezése
 
 ### push, pull
@@ -354,13 +354,13 @@ Egyes kommitok megjelölésére szolgál. pl. ez már egy kiforrott verzió, mé
     - `Annotált tag`: plusz meta adatokat lehet hozzáadni a tag-hez.
     - `Light (egyszerű) tag`: csak egy címke
 
-`git tag -a címke -m "valami üzenet"`: Annotált tag létrehozása
-`git tag címke`: Light tag létrehozása
-`git tag címke 721a34b`: Egy megydott hash kódú commit utólagos tag-elése
-`git tag -d v1.1 zoli`: Az v1.1 és a zoli tag-ek törlődnek az commitokból
-`git tag`: Tag-ek listázása (minden tag)
-`git tag --list "v*"`: A v-vel kezdődő tag-ek listázása
-`git push --tags`: Tag-ek pusholása (???) 
+`git tag -a címke -m "valami üzenet"`: Annotált tag létrehozása  
+`git tag címke`: Light tag létrehozása  
+`git tag címke 721a34b`: Egy megydott hash kódú commit utólagos tag-elése  
+`git tag -d v1.1 zoli`: Az v1.1 és a zoli tag-ek törlődnek az commitokból  
+`git tag`: Tag-ek listázása (minden tag)  
+`git tag --list "v*"`: A v-vel kezdődő tag-ek listázása  
+`git push --tags`: Tag-ek pusholása (???)  
 
 ## Kollaboráció
 Settings / Manage access
@@ -368,7 +368,6 @@ Settings / Manage access
 ## Ágak (branch)
 Egy ágat azért hozunk létre, hogy anélkül fejlesszünk, hogy zavarnánk a többi ágat.  
 Ha kész vagyunk a fejlesztéssel, akkor a master ágba egyesíthetjük: merge.  
-A helyi repó ágai nem kerülnek fel a GitHub-ra ott külön létre kell őket hozni.  
 
 
 
