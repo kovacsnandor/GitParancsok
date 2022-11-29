@@ -8,39 +8,39 @@
 1. Parancsori lehetőségek: GitBash ajánlott  
 ![setup 1](pict/setup1.JPG)    
 
-2. Alapértelmezett editor: Note++, VsCode, stb.
+2. Alapértelmezett editor: Note++, VsCode, stb.  
 ![setup 2](pict/setup2.JPG)   
 
 3. A fő ág elnevezése:
     - Régen ez master volt, ma main
-    - Ez csak a régi repositorikra vonatkozik
+    - Ez csak a régi repositorikra vonatkozik  
 ![setup 3](pict/setup3.JPG)    
 
-4. Melyik command ablakba integrálja magát.
+4. Melyik command ablakba integrálja magát.  
 ![setup 4](pict/setup4.JPG)
 
-5. Milyen biztonságos csatornán kommunikáljon a távoli repo-val.
+5. Milyen biztonságos csatornán kommunikáljon a távoli repo-val.  
 ![setup 5](pict/setup5.JPG)
 
-6. Hol legyen a certificate (tanúsítvány) fájl.
+6. Hol legyen a certificate (tanúsítvány) fájl.  
 ![setup 6](pict/setup6.JPG)
 
-7. Mi legyen a sorvége jel (Wondowsnál az első ajánlott).
+7. Mi legyen a sorvége jel (Wondowsnál az első ajánlott).  
 ![setup 7](pict/setup7.JPG)
 
-8. Melyik terminált emulálja a GitBash.
+8. Melyik terminált emulálja a GitBash.  
 ![setup 8](pict/setup8.JPG)
 
-9. Dafault ajánlott: pull esetén ha nálunk nics változtatás, akkor lehúzza, egéybként megpróbálja merge-elni.
+9. Dafault ajánlott: pull esetén ha nálunk nics változtatás, akkor lehúzza, egéybként megpróbálja merge-elni.  
 ![setup 9](pict/setup9.JPG)
 
-10. Ne kelljen állandóan beírni az azonosító lulcsot, csak egyszer.
+10. Ne kelljen állandóan beírni az azonosító lulcsot, csak egyszer.  
 ![setup 10](pict/setup10.JPG)
 
-11. Extra opciók.
+11. Extra opciók.  
 ![setup 11](pict/setup11.JPG)
 
-12. Kírésleti opciók.
+12. Kisérleti opciók.  
 ![setup 12](pict/setup12.JPG)
 
 ## Git verziója
