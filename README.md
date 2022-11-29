@@ -1,3 +1,5 @@
+[this repo](https://github.com/kovacsnandor/GitParancsok)
+
 # Git telepítése a számítógépre
 [git oldal](https://git-scm.com/)
 
