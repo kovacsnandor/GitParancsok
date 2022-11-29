@@ -234,6 +234,15 @@ Az első push-nál `personal acces token`-t kell létrehozni:
             - Ad egy tokent
             - ezt kell beilleszteni
 
+### VsCode és GitHub összekapcsolása
+[cikk](https://josuamarcelc.com/github-personal-access-token-on-vscode/)      
+[videó](https://www.youtube.com/watch?v=IJf_Tryhzic)   
+
+- klónozás tokennel:
+    - `git clone https://<TOKEN>@github.com/<username>/<repository_name>.git`
+- kapcsolódás egy meglévő repo-hoz:
+    - `git remote set-url origin https://<TOKEN>@github.com/<username>/<repository_name>.git`    
+
 ### Meglévő GitHub repo klónozása
 `git clone url`: A helyi gép mappájába lehúzza az url-hez tartozó gitHub repót a repó nevének mappájába  
 `git clone url mappa`: A helyi gép mappájába lehúzza az url-hez tartozó gitHub repót a megadott nevű mappába  
