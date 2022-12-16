@@ -304,6 +304,9 @@ Az első push-nál `personal acces token`-t kell létrehozni:
     - `git remote set-url origin https://<TOKEN>@github.com/<username>/<repository_name>.git` (ez nem jó) 
     - `git remote add origin https://<TOKEN>@github.com/<username>/<repository_name>.git`  (ez működik)   
 
+- git remote origin törlése
+  - `git remote remove origin`    
+
 ### Meglévő GitHub repo klónozása
 `git clone url`: A helyi gép mappájába lehúzza az url-hez tartozó gitHub repót a repó nevének mappájába  
 `git clone url mappa`: A helyi gép mappájába lehúzza az url-hez tartozó gitHub repót a megadott nevű mappába  
