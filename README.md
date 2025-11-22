@@ -298,11 +298,25 @@ Az első push-nál `personal acces token`-t kell létrehozni:
 [cikk](https://josuamarcelc.com/github-personal-access-token-on-vscode/)      
 [videó](https://www.youtube.com/watch?v=IJf_Tryhzic)   
 
-- klónozás tokennel:
-    - `git clone https://<TOKEN>@github.com/<username>/<repository_name>.git`
-- kapcsolódás egy meglévő repo-hoz:
-    - `git remote set-url origin https://<TOKEN>@github.com/<username>/<repository_name>.git` (ez nem jó) 
-    - `git remote add origin https://<TOKEN>@github.com/<username>/<repository_name>.git`  (ez működik)   
+1. Ha a főág neve nem main
+```console
+git branch -M main
+```
+2. Kapcsolódás a távoli repóhoz. Pontosabban az origin (eredet) nevű kapcsolóhóüz hozzárendeljük a távoli repó linkjét (GitHuburl)
+```console
+git remote add origin <GitHuburl>
+```
+
+3. A main ág push feltöltése
+- -u: (upstream) beállítja, hogy a main ág automatikusan kövesse az origin-nak megfelelő github ágat, vagyis push esetén oda pus-holjon
+```console
+git push -u origin main
+```
+
+4. Ha már vannak ágaink, ezzel minden ág felpusholódik, és mindegyiknél beállítódik az upstream
+```console
+git push --all origin --set-upstream
+```
 
 - git remote origin törlése
   - `git remote remove origin`    
