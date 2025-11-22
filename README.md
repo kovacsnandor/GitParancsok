@@ -375,7 +375,9 @@ git push --all origin --set-upstream
 ```
 
 - git remote origin törlése
-  - `git remote remove origin`    
+```console
+git remote remove origin
+```
 
 ### Meglévő GitHub repo klónozása
 A helyi gép mappájába lehúzza az url-hez tartozó gitHub repót a repó nevének mappájába:
@@ -455,7 +457,9 @@ lehozza változatásokat, de nem mergeli össze a helyi repóval. Ezután ki kel
 ```console
 git fetch
 ```
-`git merge origin/master`
+```console
+git merge origin/master
+```
 
 
 ### Tag-ek
