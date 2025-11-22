@@ -88,26 +88,26 @@ A commit-nál elengedhetetlen, hogy lássuk, ki tette, ezért be kell állítani
 **Globálisan**:  
 **Email** megadása **globálisan**:
 ```console
-git config --global user.email "xy.gmail.com"`
-`` 
+git config --global user.email "xy.gmail.com"
+``` 
 **Usernév** megadása **globálisan**:
 ```console
-git config --global user.name "xy"`
-`` 
+git config --global user.name "xy"
+``` 
 
 **Lokálisan**:  
 **Email** megadása **lokálisan** (csak arra a mappára):
 ```console
 git config user.email "xy.gmail.com"`
-`` 
+```
 **Usernév** megadása **lokálisan**:
 ```console
-git config user.name "xy"`
-`` 
+git config user.name "xy"
+```
 
 A konfig fájl listája (kilépés: `q`):
 ```console
-git config --list`
+git config --list
 ```
 
 ### Email és User név beállítása kötegelt fájlból
@@ -136,8 +136,8 @@ git init
 ```
 Helyi repo létrehozása a mappa nevű mappában.:
 ```console
-git init mappa`
-`` 
+git init mappa
+```
 
 ### Alap parancsok
 **Status**:  
