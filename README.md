@@ -381,6 +381,7 @@ git remote remove origin
 
 ### Meglévő GitHub repo klónozása
 A helyi gép mappájába lehúzza az url-hez tartozó gitHub repót a repó nevének mappájába:
+Ilyenkor minden ág lejön
 ```console
 git clone url
 ```
@@ -438,7 +439,7 @@ távoli repo állapotának lekérdezése:
 git remote show origin
 ```
 
-### push, pull
+### push
 A commitált változtatások felküldése a távoli repóba (csak az aktuális ág fog felkerülni):
 ```console
 git push
@@ -447,6 +448,12 @@ Minden ág felkerül (ezt nem érdemes csinálni, mert a saját ágaink lehet ho
 ```console
 git push --all
 ```
+Minden ág felrakása:
+```console
+git push -u origin --all
+```
+
+### pull
 A távoli repóból lehúzza a változatásokat (érdemes mindig ezzel kezdeni):
 ```console
 git pull
@@ -460,7 +467,6 @@ git fetch
 ```console
 git merge origin/master
 ```
-
 
 ### Tag-ek
 Egyes kommitok megjelölésére szolgál. pl. ez már egy kiforrott verzió, mérföldkő, valamilyen állapot stb. A tag könyvjelzőnek is felfogható.  
@@ -507,6 +513,26 @@ Settings / Manage access
 ## Ágak (branch)
 Egy ágat azért hozunk létre, hogy anélkül fejlesszünk, hogy zavarnánk a többi ágat.  
 Ha kész vagyunk a fejlesztéssel, akkor a master ágba egyesíthetjük: merge.  
+
+# Tanár előad, diák követi szituáció
+1. A tanár repója publikus, nincs kollaborátor a diákol lekklónozzák, az mindenestül lejön
+## Normál szituáció
+2. Mindketten párhuzamosan dolgoznak, a diák nem pusholhat, viszont ha akar, pullolhat
+- Konfliktus esetén: Accept Incoming Change-t kell választania
+
+## Hiányzott a diák és szinkronizálni akar
+- Ha szinkronba akarja hozni a diák a munkáját, mert hiányzott:
+1. Lehúzzuk az összes változást, de még nem érvényesül (lefelé mutató szaggatott nyíl)
+```console
+git fetch origin
+```
+2. Áganként felülírjuk a tanáréval a lehúzott anyagból.
+- Ez kíméletlenül felülírja a diák munkáját
+```console
+git reset --hard origin/<ág_neve>
+```
+
+
 
 
 
